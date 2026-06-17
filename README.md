@@ -39,12 +39,12 @@ Practice SOC analysis and threat detection
 
 ##  technologies Used
 
-Firewall: pfSense
-SIEM: Splunk
-Directory Services: Active Directory (Windows Server)
-Endpoint: Windows Client
-VPN: pfSense OpenVPN / IPSec
-Network Segmentation: LAN / OPT1 / VPN
+-Firewall: pfSense
+-SIEM: Splunk
+-Directory Services: Active Directory (Windows Server)
+-Endpoint: Windows 10,7 Client
+-VPN: pfSense OpenVPN / IPSec
+-Network Segmentation: LAN / OPT1 / VPN
 
 
 
@@ -58,7 +58,7 @@ Splunk collects logs from:
  Network traffic metadata
 
 
-## Detection Use Cases
+## Detection Use Cases(Loading)
 1.  Brute Force Login (AD)
 Detect repeated failed login attempts:
 index=windows EventCode=4625
@@ -87,50 +87,46 @@ index=windows EventCode=4672
 ### Example Log:
 ##  Steps
 Lab photo demonstration.
+- Pfsense Firewall (Network Segmentation, Rules, and,VPN)
 
-
-
-<img src="https://imgur.com/oBWor6Q.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><img src="https://imgur.com/qUTCQrW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><img src="https://imgur.com/5cR54n5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/S4oj092.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><img src="https://imgur.com/imDT0tq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><img src="https://imgur.com/XHTCDsN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><img src="https://imgur.com/TnXXBXr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 <br />
 <br />
 
 
--Creating the honeypot, which will be Windows 10.
+-VPN Client Windows 10.
 
-<img src="https://imgur.com/casE3Ic.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><img src="https://imgur.com/DnBGFgk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/Y97mhVi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <br />
 <br />
 
 
--Now we created everything which we the network security group is the firewall, network interface, and ethernet port.
+-Active Directory Corp.local and It's client Windows 10,7(FANZA=users)
 
-<img src="https://imgur.com/9ci2vJG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/QBqvPHV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><img src="https://imgur.com/HWxGOfW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><img src="https://imgur.com/4wEXtHa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><img src="https://imgur.com/k5Z1c34.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br />
+<br />
+
+-Windows 10 Corp.local
+<img src="https://imgur.com/1Com48O.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
 <br />
 <br />
 
 
--I add inbound traffic,  which can receive traffic from any any.
+-Splunk.
 
+<img src="https://imgur.com/K6gCzDt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<img src="https://imgur.com/g700mVm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/OVStTTK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/FRZS47P.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 <br />
 <br />
 
 
-Log in to Windows 10, aka (Honeypot).
-
-
-<img src="https://imgur.com/YTwr0rc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-
-
--Turning the WF.msc or the Windows Firewall off
-
-
-<img src="https://imgur.com/wA58yIy.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
